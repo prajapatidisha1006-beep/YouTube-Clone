@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #181818;
+    color: white;
+}
+
+
+.header {
+    position: relative;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #202020;
+    padding: 10px 20px;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 45px;
+    font-weight: bold;
+    color: white;
+    
+}
+
+.icon {
+    color: red;
+}
+
+.hamburger {
+    color: white;
+    font-size: 40px;
+}
+
+.search-box {
+    display: flex;
+    width: 45%;
+    color:black;
+    background-color: #202020;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 3px;
+    border: 5px;
+    background-color: white;
+    color: black;
+    outline: none;
+    font-size: 30px;
+}
+
+.search-box button {
+    background: white;
+    border: none;
+    padding: 15px 15px;
+    cursor: pointer;
+    font-size: 40px;
+}
+
+.profile {
+    font-size: 40px;
+}
+
+
+.sidebar {
+    width: 220px;
+    background: #202020;
+    height: 100vh;
+    position: fixed;
+    padding-top: 20px;
+}
+
+.menu-item {
+    padding: 12px 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.menu-item:hover {
+    background: #383838;
+}
+
+.active {
+    background: #383838;
+}
+
+
+.main {
+    margin-left: 240px;
+    padding: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.video-card {
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.video-card:hover {
+    transform: scale(1.05);
+}
+
+
+.thumbnail {
+    position: relative;
+}
+
+.thumbnail img {
+    width:80%;
+    border-radius: 10px;
+    margin-left: 250px;
+    height:auto;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.duration {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    background: black;
+    padding: 3px 6px;
+    font-size: 12px;
+    border-radius: 4px;
+}
+
+
+.video-info {
+    display: flex;
+    margin-top: 10px;
+}
+
+.channel-logo {
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+
+.video-info h3 {
+    font-size: 20px;
+    margin-left: 250px;
+}
+
+.video-info p {
+    font-size: 15px;
+    color: #aaa;
+    margin-left: 250px;
+}
+
+
+
+
+@media (max-width: 768px) {
+    .sidebar {
+        display: none;
+    }
+
+    .main {
+        margin-left: 0;
+    }
+
+    .search-box {
+        width: 50%;
+    }
+}
